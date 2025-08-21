@@ -279,7 +279,7 @@ class NLLBTranslationService:
                 # Optimize for GPU usage
                 low_cpu_mem_usage=True,
                 use_cache=True,
-                attn_implementation="flash_attention_2" if torch.cuda.is_available() else None
+                attn_implementation="eager"
             )
             
             # Enable optimizations for inference

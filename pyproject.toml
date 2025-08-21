@@ -6,30 +6,28 @@ build-backend = "setuptools.build_meta"
 name = "nllb-200-api"
 version = "1.0.0"
 description = "FastAPI server for NLLB-200 translation model"
-authors = [{name = "Satcomx00-x00", email = ""}]
+authors = [
+    {name = "Satcomx00-x00", email = "raspsatcombot@gmail.com"}
+]
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
-    "fastapi>=0.104.0",
-    "uvicorn[standard]>=0.24.0",
-    "transformers>=4.35.0",
-    "torch>=2.0.0",
-    "pydantic>=2.4.0",
-    "python-dotenv>=1.0.0",
-    "loguru>=0.7.0",
-    "sentencepiece>=0.1.99",
-    "accelerate>=0.24.0",
+    "fastapi",
+    "pydantic_settings",
+    "uvicorn[standard],
+    "transformers",
+    "torch",
+    "pydantic",
+    "python-dotenv",
+    "loguru",
+    "sentencepiece",
+    "accelerate",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.4.0",
-    "pytest-asyncio>=0.21.0",
-    "pytest-cov>=4.1.0",
     "httpx>=0.25.0",
     "mypy>=1.6.0",
-    "black>=23.0.0",
-    "isort>=5.12.0",
 ]
 
 [tool.pytest.ini_options]
@@ -53,10 +51,3 @@ warn_no_return = true
 warn_unreachable = true
 strict_equality = true
 
-[tool.black]
-line-length = 88
-target-version = ['py38']
-
-[tool.isort]
-profile = "black"
-line_length = 88
