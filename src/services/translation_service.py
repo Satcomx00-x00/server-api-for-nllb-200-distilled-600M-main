@@ -356,7 +356,7 @@ class NLLBTranslationService:
             inputs = {k: v.to(device, non_blocking=True) for k, v in inputs.items()}
             
             # Generate translation with optimized GPU settings
-            with torch.no_grad(), torch.cuda.amp.autocast(enabled=torch.cuda.is_available()):
+            with torch.no_grad(), torch.amp.autocast('cuda', enabled=torch.cuda.is_available()):
                 outputs = self.model.generate(
                     **inputs,
                     forced_bos_token_id=self.tokenizer.convert_tokens_to_ids(target_code),
