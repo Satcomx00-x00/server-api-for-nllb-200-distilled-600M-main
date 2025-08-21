@@ -9,6 +9,7 @@ from loguru import logger
 from src.config.settings import settings
 
 
+
 def timer_decorator(func):
     """Decorator to measure execution time of async functions."""
     @functools.wraps(func)
