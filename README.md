@@ -112,3 +112,5 @@ The NLLB-200 model supports 200 languages. Check the `/languages` endpoint for t
 ## License
 
 MIT License - see LICENSE file for details.
+
+All facebook/NLLB-200 Models on License CC-BY-NC 
